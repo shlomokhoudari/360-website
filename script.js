@@ -40,7 +40,7 @@ document.querySelectorAll('.services-grid, .clients-grid, .about-pillars').forEa
   });
 });
 
-// Contact form — FormSubmit
+// Contact form — Netlify Forms
 document.getElementById('contactForm').addEventListener('submit', async function(e) {
   e.preventDefault();
   const name    = document.getElementById('name').value.trim();
@@ -63,22 +63,19 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
   try {
     const formData = new FormData();
+    formData.append('form-name', 'contact');
     formData.append('name', name);
     formData.append('email', email);
     formData.append('company', company || '—');
     formData.append('message', message);
-    formData.append('_subject', `Inquiry from ${name}${company ? ' – ' + company : ''}`);
-    formData.append('_captcha', 'false');
-    formData.append('_template', 'table');
 
-    const res = await fetch('https://formsubmit.co/360@360visiondc.com', {
+    const res = await fetch('/', {
       method: 'POST',
       body: formData,
-      headers: { 'Accept': 'application/json' },
     });
 
     if (res.ok) {
-      note.textContent = 'Message sent. We\'ll be in touch shortly.';
+      note.textContent = "Message sent. We'll be in touch shortly.";
       note.className = 'form-note success';
       this.reset();
     } else {
