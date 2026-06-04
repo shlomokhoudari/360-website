@@ -41,7 +41,7 @@ document.querySelectorAll('.services-grid, .clients-grid, .about-pillars').forEa
 });
 
 // Contact form — Web3Forms
-const WEB3FORMS_KEY = '77f8e434-c84a-4042-a2b7-1a9ec7983d5f';
+const WEB3FORMS_KEY = '793c516f-93b9-48a5-86fc-10030a57d1c5';
 
 document.getElementById('contactForm').addEventListener('submit', async function(e) {
   e.preventDefault();
