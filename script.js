@@ -40,9 +40,7 @@ document.querySelectorAll('.services-grid, .clients-grid, .about-pillars').forEa
   });
 });
 
-// Contact form — Web3Forms
-const WEB3FORMS_KEY = '793c516f-93b9-48a5-86fc-10030a57d1c5';
-
+// Contact form — FormSubmit
 document.getElementById('contactForm').addEventListener('submit', async function(e) {
   e.preventDefault();
   const name    = document.getElementById('name').value.trim();
@@ -64,28 +62,27 @@ document.getElementById('contactForm').addEventListener('submit', async function
   note.className = 'form-note';
 
   try {
-    const res = await fetch('https://api.web3forms.com/submit', {
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('email', email);
+    formData.append('company', company || '—');
+    formData.append('message', message);
+    formData.append('_subject', `Inquiry from ${name}${company ? ' – ' + company : ''}`);
+    formData.append('_captcha', 'false');
+    formData.append('_template', 'table');
+
+    const res = await fetch('https://formsubmit.co/360@360visiondc.com', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        access_key: WEB3FORMS_KEY,
-        name,
-        email,
-        company: company || '—',
-        message,
-        subject: `Inquiry from ${name}${company ? ' – ' + company : ''}`,
-      }),
+      body: formData,
+      headers: { 'Accept': 'application/json' },
     });
 
-    const data = await res.json();
-    console.log('Web3Forms response:', data);
-
-    if (data.success) {
+    if (res.ok) {
       note.textContent = 'Message sent. We\'ll be in touch shortly.';
       note.className = 'form-note success';
       this.reset();
     } else {
-      throw new Error(data.message || 'Submission failed');
+      throw new Error('Submission failed');
     }
   } catch (err) {
     console.error('Form error:', err);
