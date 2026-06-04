@@ -45,10 +45,10 @@ const WEB3FORMS_KEY = '793c516f-93b9-48a5-86fc-10030a57d1c5';
 
 document.getElementById('contactForm').addEventListener('submit', async function(e) {
   e.preventDefault();
-  const name    = this.name.value.trim();
-  const company = this.company.value.trim();
-  const email   = this.email.value.trim();
-  const message = this.message.value.trim();
+  const name    = document.getElementById('name').value.trim();
+  const company = document.getElementById('company').value.trim();
+  const email   = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
   const note    = document.getElementById('formNote');
   const btn     = this.querySelector('button[type="submit"]');
 
@@ -88,6 +88,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
       throw new Error(data.message || 'Submission failed');
     }
   } catch (err) {
+    console.error('Form error:', err);
     note.textContent = 'Something went wrong. Please email us directly at 360@360visiondc.com';
     note.className = 'form-note error';
   } finally {
