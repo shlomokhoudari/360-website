@@ -40,9 +40,10 @@ document.querySelectorAll('.services-grid, .clients-grid, .about-pillars').forEa
   });
 });
 
-// Contact form — Netlify Forms
-document.getElementById('contactForm').addEventListener('submit', async function(e) {
+// Contact form — Web3Forms
+document.getElementById('contactForm').addEventListener('submit', async function (e) {
   e.preventDefault();
+
   const name    = document.getElementById('name').value.trim();
   const company = document.getElementById('company').value.trim();
   const email   = document.getElementById('email').value.trim();
@@ -61,28 +62,33 @@ document.getElementById('contactForm').addEventListener('submit', async function
   note.textContent = '';
   note.className = 'form-note';
 
-  try {
-    const formData = new FormData();
-    formData.append('form-name', 'contact');
-    formData.append('name', name);
-    formData.append('email', email);
-    formData.append('company', company || '—');
-    formData.append('message', message);
+  const payload = {
+    access_key: '20b01275-e341-4108-a30b-d2a084282c8b',
+    subject: 'New Inquiry — 360 Vision Design Corp.',
+    from_name: name,
+    name: name,
+    email: email,
+    company: company || '—',
+    message: message,
+  };
 
-    const res = await fetch('/', {
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
-      body: formData,
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload),
     });
 
-    if (res.ok) {
+    const data = await res.json();
+
+    if (data.success) {
       note.textContent = "Message sent. We'll be in touch shortly.";
       note.className = 'form-note success';
       this.reset();
     } else {
-      throw new Error('Submission failed');
+      throw new Error(data.message || 'Submission failed');
     }
   } catch (err) {
-    console.error('Form error:', err);
     note.textContent = 'Something went wrong. Please email us directly at 360@360visiondc.com';
     note.className = 'form-note error';
   } finally {
