@@ -403,7 +403,7 @@ section {
 
 /* ─── GOLDEN BAR ───────────────────────────────────────────── */
 .golden-bar {
-  height: 75px;
+  height: 38px;
   background: var(--gold);
 }
 
