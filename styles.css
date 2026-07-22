@@ -862,6 +862,10 @@ section {
 
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .clients-grid  { grid-template-columns: repeat(2, 1fr); }
+
+  /* Collections: two photos per view so they aren't slivers */
+  .carousel-slide { flex: 0 0 calc(50% - 3px); }
+  .carousel-slide img { height: 340px; }
 }
 
 @media (max-width: 640px) {
@@ -901,4 +905,10 @@ section {
   }
 
   .footer-contact { text-align: left; }
+
+  /* Collections: stack to one column, two photos per view */
+  .collections-grid { grid-template-columns: 1fr; }
+  .carousel-slide { flex: 0 0 calc(50% - 3px); }
+  .carousel-slide img { height: 300px; }
+  .carousel-slide img:hover { filter: brightness(0.88); }
 }
