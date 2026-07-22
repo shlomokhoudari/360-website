@@ -40,6 +40,51 @@ document.querySelectorAll('.services-grid, .clients-grid, .about-pillars').forEa
   });
 });
 
+// Carousels
+function initCarousel(id, intervalMs) {
+  const track = document.getElementById(id);
+  if (!track) return;
+
+  // Remove slides whose images failed to load
+  Array.from(track.querySelectorAll('.carousel-slide img')).forEach(img => {
+    if (img.complete && img.naturalWidth === 0) img.closest('.carousel-slide').remove();
+  });
+
+  const originals = Array.from(track.children);
+  const count = originals.length;
+  if (count === 0) return;
+  originals.forEach(s => track.appendChild(s.cloneNode(true)));
+
+  let idx = 0;
+
+  function slideWidth() {
+    return track.children[0].offsetWidth + 6;
+  }
+
+  function advance() {
+    idx++;
+    track.style.transition = 'transform 0.8s cubic-bezier(0.4,0,0.2,1)';
+    track.style.transform = `translateX(-${idx * slideWidth()}px)`;
+    if (idx >= count) {
+      setTimeout(() => {
+        track.style.transition = 'none';
+        track.style.transform = 'translateX(0)';
+        idx = 0;
+      }, 820);
+    }
+  }
+
+  setInterval(advance, intervalMs);
+}
+
+// Init after window load so image naturalWidth is reliable
+window.addEventListener('load', () => {
+  initCarousel('carousel-men',   3000);
+  initCarousel('carousel-women', 3400);
+  initCarousel('carousel-boy',   3800);
+  initCarousel('carousel-girl',  4200);
+});
+
 // Contact form — Web3Forms
 document.getElementById('contactForm').addEventListener('submit', async function (e) {
   e.preventDefault();
