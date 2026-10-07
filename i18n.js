@@ -222,7 +222,7 @@ function setLang(lang) {
   document.querySelectorAll('.wa-link').forEach(a => { a.href = waUrl; });
 
   document.getElementById('langCurrent').textContent = LANGS[lang].label;
-  document.querySelectorAll('#langMenu button').forEach(b => {
+  document.querySelectorAll('[data-lang]').forEach(b => {
     b.classList.toggle('active', b.dataset.lang === lang);
   });
 
@@ -244,7 +244,7 @@ langBtn.addEventListener('click', (e) => {
   langBtn.setAttribute('aria-expanded', String(open));
 });
 
-langMenu.querySelectorAll('button').forEach(b => {
+document.querySelectorAll('[data-lang]').forEach(b => {
   b.addEventListener('click', () => {
     setLang(b.dataset.lang);
     closeLangMenu();

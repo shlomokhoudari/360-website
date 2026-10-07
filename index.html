@@ -7,7 +7,7 @@
   <meta name="description" content="360 Vision Design Corp. is a full-service global design, production, and logistics company. Over 35 years of expertise in apparel and retail solutions worldwide." />
   <link rel="icon" type="image/png" href="assets/favicon.png" media="(prefers-color-scheme: dark)" />
   <link rel="icon" type="image/png" href="assets/favicon-dark.png" media="(prefers-color-scheme: light)" />
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=5" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@700&family=Noto+Sans+Devanagari:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@700&display=swap" rel="stylesheet" />
@@ -21,6 +21,18 @@
         <img src="assets/logo-white.png" alt="360 Vision Design Corp." class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
         <span class="logo-fallback">360 VISION DESIGN CORP.</span>
       </a>
+      <div class="lang-switch">
+        <button type="button" class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Language">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+          <span id="langCurrent">EN</span>
+        </button>
+        <ul class="lang-menu" id="langMenu">
+          <li><button type="button" data-lang="en" lang="en">English</button></li>
+          <li><button type="button" data-lang="es" lang="es">Español</button></li>
+          <li><button type="button" data-lang="zh" lang="zh-Hans">中文</button></li>
+          <li><button type="button" data-lang="hi" lang="hi">हिन्दी</button></li>
+        </ul>
+      </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -30,17 +42,11 @@
         <li><a href="#clients" data-i18n="nav.clients">Clients</a></li>
         <li><a href="#global" data-i18n="nav.global">Global</a></li>
         <li><a href="#contact" class="nav-cta" data-i18n="nav.contact">Contact Us</a></li>
-        <li class="lang-switch">
-          <button type="button" class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Language">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
-            <span id="langCurrent">EN</span>
-          </button>
-          <ul class="lang-menu" id="langMenu">
-            <li><button type="button" data-lang="en" lang="en">English</button></li>
-            <li><button type="button" data-lang="es" lang="es">Español</button></li>
-            <li><button type="button" data-lang="zh" lang="zh-Hans">中文</button></li>
-            <li><button type="button" data-lang="hi" lang="hi">हिन्दी</button></li>
-          </ul>
+        <li class="lang-row">
+          <button type="button" data-lang="en" lang="en">English</button>
+          <button type="button" data-lang="es" lang="es">Español</button>
+          <button type="button" data-lang="zh" lang="zh-Hans">中文</button>
+          <button type="button" data-lang="hi" lang="hi">हिन्दी</button>
         </li>
       </ul>
     </div>
@@ -526,7 +532,7 @@
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.91-2.2-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.42-.07-.12-.27-.2-.57-.34zM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88zm8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.17-1.24-6.16-3.48-8.4z"/></svg>
   </a>
 
-  <script src="i18n.js?v=1"></script>
+  <script src="i18n.js?v=2"></script>
   <script src="script.js?v=2"></script>
 </body>
 </html>
