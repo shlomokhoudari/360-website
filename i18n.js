@@ -44,11 +44,11 @@ const I18N = {
     'cli.sub': 'Con la confianza de marcas y minoristas líderes a nivel global en moda, deporte y estilo de vida.',
 
     'glob.label': 'Dónde Estamos', 'glob.title': 'Presencia Global',
-    'glob.p1': 'Nuestras sedes y showrooms están en Panamá y China, lo que nos da una presencia estratégica en ambos extremos de la cadena de suministro global. Atendemos activamente a clientes en Panamá, Estados Unidos, Colombia, México, Argentina, Uruguay, Países Bajos, Vietnam y Japón.',
+    'glob.p1': 'Nuestras sedes y showrooms están en Panamá, China e India, lo que nos da una presencia estratégica en ambos extremos de la cadena de suministro global. Atendemos activamente a clientes en Panamá, Estados Unidos, Colombia, México, Argentina, Uruguay, Países Bajos, Vietnam y Japón.',
     'glob.p2': 'Dondequiera que opere su negocio, ofrecemos el mismo compromiso con la calidad, la consistencia y una ejecución impecable, del diseño a la entrega.',
-    'glob.hq': 'Sedes: Panamá y China',
+    'glob.hq': 'Sedes: Panamá, China e India',
     'loc.hqshow': 'Sede y Showroom', 'loc.hqprod': 'Sede y Centro de Producción', 'loc.markets': 'Mercados Atendidos',
-    'c.pa': 'Panamá', 'c.cn': 'China', 'c.us': 'Estados Unidos', 'c.co': 'Colombia', 'c.mx': 'México', 'c.ar': 'Argentina', 'c.uy': 'Uruguay', 'c.nl': 'Países Bajos', 'c.vn': 'Vietnam', 'c.jp': 'Japón',
+    'c.pa': 'Panamá', 'c.cn': 'China', 'c.in': 'India', 'c.us': 'Estados Unidos', 'c.co': 'Colombia', 'c.mx': 'México', 'c.ar': 'Argentina', 'c.uy': 'Uruguay', 'c.nl': 'Países Bajos', 'c.vn': 'Vietnam', 'c.jp': 'Japón',
 
     'contact.label': 'Contáctenos', 'contact.title': 'Construyamos Algo Juntos',
     'contact.p': 'Ya sea que esté lanzando una nueva línea de productos, entrando a un nuevo mercado o buscando un socio confiable de servicio completo, nos gustaría saber de usted.',
@@ -99,11 +99,11 @@ const I18N = {
     'cli.sub': '深受时尚、运动与生活方式领域全球领先品牌和零售商的信赖。',
 
     'glob.label': '我们在哪里', 'glob.title': '全球布局',
-    'glob.p1': '我们的总部与展厅设在巴拿马和中国，使我们在全球供应链的两端都拥有战略性布局。我们积极服务于巴拿马、美国、哥伦比亚、墨西哥、阿根廷、乌拉圭、荷兰、越南和日本的客户。',
+    'glob.p1': '我们的总部与展厅设在巴拿马、中国和印度，使我们在全球供应链的两端都拥有战略性布局。我们积极服务于巴拿马、美国、哥伦比亚、墨西哥、阿根廷、乌拉圭、荷兰、越南和日本的客户。',
     'glob.p2': '无论您的业务在何处运营，我们都以同样的承诺提供品质、一致性，以及从设计到交付的顺畅执行。',
-    'glob.hq': '总部：巴拿马与中国',
+    'glob.hq': '总部：巴拿马、中国与印度',
     'loc.hqshow': '总部与展厅', 'loc.hqprod': '总部与生产中心', 'loc.markets': '服务市场',
-    'c.pa': '巴拿马', 'c.cn': '中国', 'c.us': '美国', 'c.co': '哥伦比亚', 'c.mx': '墨西哥', 'c.ar': '阿根廷', 'c.uy': '乌拉圭', 'c.nl': '荷兰', 'c.vn': '越南', 'c.jp': '日本',
+    'c.pa': '巴拿马', 'c.cn': '中国', 'c.in': '印度', 'c.us': '美国', 'c.co': '哥伦比亚', 'c.mx': '墨西哥', 'c.ar': '阿根廷', 'c.uy': '乌拉圭', 'c.nl': '荷兰', 'c.vn': '越南', 'c.jp': '日本',
 
     'contact.label': '联系我们', 'contact.title': '携手共创未来',
     'contact.p': '无论您是在推出新的产品线、进入新市场，还是在寻找可靠的全方位服务合作伙伴——我们都期待您的来信。',
@@ -154,11 +154,11 @@ const I18N = {
     'cli.sub': 'फ़ैशन, स्पोर्ट और लाइफ़स्टाइल के अग्रणी वैश्विक ब्रांडों और रिटेलरों का भरोसा।',
 
     'glob.label': 'हम कहाँ हैं', 'glob.title': 'वैश्विक उपस्थिति',
-    'glob.p1': 'हमारे मुख्यालय और शोरूम पनामा और चीन में हैं, जिससे वैश्विक सप्लाई चेन के दोनों सिरों पर हमारी रणनीतिक उपस्थिति है। हम पनामा, संयुक्त राज्य अमेरिका, कोलंबिया, मेक्सिको, अर्जेंटीना, उरुग्वे, नीदरलैंड, वियतनाम और जापान के ग्राहकों को सक्रिय रूप से सेवा देते हैं।',
+    'glob.p1': 'हमारे मुख्यालय और शोरूम पनामा, चीन और भारत में हैं, जिससे वैश्विक सप्लाई चेन के दोनों सिरों पर हमारी रणनीतिक उपस्थिति है। हम पनामा, संयुक्त राज्य अमेरिका, कोलंबिया, मेक्सिको, अर्जेंटीना, उरुग्वे, नीदरलैंड, वियतनाम और जापान के ग्राहकों को सक्रिय रूप से सेवा देते हैं।',
     'glob.p2': 'आपका व्यवसाय जहाँ भी हो, हम डिज़ाइन से डिलीवरी तक गुणवत्ता, निरंतरता और सहज निष्पादन की वही प्रतिबद्धता निभाते हैं।',
-    'glob.hq': 'मुख्यालय: पनामा और चीन',
+    'glob.hq': 'मुख्यालय: पनामा, चीन और भारत',
     'loc.hqshow': 'मुख्यालय और शोरूम', 'loc.hqprod': 'मुख्यालय और उत्पादन केंद्र', 'loc.markets': 'सेवा प्राप्त बाज़ार',
-    'c.pa': 'पनामा', 'c.cn': 'चीन', 'c.us': 'संयुक्त राज्य अमेरिका', 'c.co': 'कोलंबिया', 'c.mx': 'मेक्सिको', 'c.ar': 'अर्जेंटीना', 'c.uy': 'उरुग्वे', 'c.nl': 'नीदरलैंड', 'c.vn': 'वियतनाम', 'c.jp': 'जापान',
+    'c.pa': 'पनामा', 'c.cn': 'चीन', 'c.in': 'भारत', 'c.us': 'संयुक्त राज्य अमेरिका', 'c.co': 'कोलंबिया', 'c.mx': 'मेक्सिको', 'c.ar': 'अर्जेंटीना', 'c.uy': 'उरुग्वे', 'c.nl': 'नीदरलैंड', 'c.vn': 'वियतनाम', 'c.jp': 'जापान',
 
     'contact.label': 'संपर्क करें', 'contact.title': 'आइए मिलकर कुछ बनाएँ',
     'contact.p': 'चाहे आप नई प्रोडक्ट लाइन शुरू कर रहे हों, किसी नए बाज़ार में प्रवेश कर रहे हों, या एक भरोसेमंद संपूर्ण-सेवा भागीदार की तलाश में हों — हमें आपसे बात करके ख़ुशी होगी।',
