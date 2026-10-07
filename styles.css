@@ -401,6 +401,12 @@ section {
   width: auto;
 }
 
+/* Larger logo on desktop only; phones and tablets keep the size above */
+@media (min-width: 961px) {
+  .logo-img { height: 99px; }
+  .nav-inner { height: 120px; }
+}
+
 /* ─── GOLDEN BAR ───────────────────────────────────────────── */
 .golden-bar {
   height: 38px;
