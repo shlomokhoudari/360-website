@@ -97,13 +97,13 @@ document.getElementById('contactForm').addEventListener('submit', async function
   const btn     = this.querySelector('button[type="submit"]');
 
   if (!name || !email || !message) {
-    note.textContent = 'Please fill in all required fields.';
+    note.textContent = t('form.required');
     note.className = 'form-note error';
     return;
   }
 
   btn.disabled = true;
-  btn.textContent = 'Sending…';
+  btn.textContent = t('form.sending');
   note.textContent = '';
   note.className = 'form-note';
 
@@ -127,17 +127,17 @@ document.getElementById('contactForm').addEventListener('submit', async function
     const data = await res.json();
 
     if (data.success) {
-      note.textContent = "Message sent. We'll be in touch shortly.";
+      note.textContent = t('form.success');
       note.className = 'form-note success';
       this.reset();
     } else {
       throw new Error(data.message || 'Submission failed');
     }
   } catch (err) {
-    note.textContent = 'Something went wrong. Please email us directly at 360@360visiondc.com';
+    note.textContent = t('form.error');
     note.className = 'form-note error';
   } finally {
     btn.disabled = false;
-    btn.textContent = 'Send Message';
+    btn.textContent = t('form.send');
   }
 });
